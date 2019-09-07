@@ -16,3 +16,19 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+///para crear cosas POST
+Route::POST('user', 'ApiController@crearUsuario');///{datos de la tienda}
+Route::POST('tienda','ApiController@crearTienda');///{datos de la tienda}
+Route::POST('producto', 'ApiController@crearProducto');//{datos del producto}
+Route::POST('venta','ApiController@crearVenta'); ///{datos de la venta}
+//para consultas GET
+Route::GET('tienda', 'ApiController@getTienda'); ///{datos de la tienda}
+Route::GET('producto', 'ApiController@getProducto'); //{datos del producto}
+Route::GET('venta', 'ApiController@getVenta');///{datos de la venta}
+
+//para actualizar PUT
+
+
+//para borrrar DELETE
