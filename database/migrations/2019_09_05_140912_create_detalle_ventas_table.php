@@ -19,6 +19,8 @@ class CreateDetalleVentasTable extends Migration
             $table->foreign('venta_id')->references('id')->on('ventas')->onDelete('cascade');
             $table->bigInteger('producto_id')->unsigned();
             $table->foreign('producto_id')->references('id')->on('productos')->onDelete('cascade');
+            $table->string('precio');
+            $table->integer('cantidad');
             $table->timestamps();
         });
     }

@@ -17,7 +17,9 @@ class CreateVentasTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('cliente_id')->unsigned();
             $table->foreign('cliente_id')->references('id')->on('clientes')->onDelete('cascade');
-           
+            $table->bigInteger('tienda_id')->unsigned();
+            $table->foreign('tienda_id')->references('id')->on('tiendas')->onDelete('cascade');
+            $table->date('fecha');
             $table->timestamps();
         });
     }
