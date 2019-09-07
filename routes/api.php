@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 ///para crear cosas POST
-Route::POST('user', 'ApiController@crearUsuario');///{datos de la tienda}
+Route::POST('user', 'ApiController@login');///{datos de la tienda}
 Route::POST('tienda','ApiController@crearTienda');///{datos de la tienda}
 Route::POST('producto', 'ApiController@crearProducto');//{datos del producto}
 Route::POST('venta','ApiController@crearVenta'); ///{datos de la venta}
@@ -27,8 +27,6 @@ Route::POST('venta','ApiController@crearVenta'); ///{datos de la venta}
 Route::GET('tienda', 'ApiController@getTienda'); ///{datos de la tienda}
 Route::GET('producto', 'ApiController@getProducto'); //{datos del producto}
 Route::GET('venta', 'ApiController@getVenta');///{datos de la venta}
-
 //para actualizar PUT
-
 
 //para borrrar DELETE
